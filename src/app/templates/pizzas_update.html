@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="/pizzas/update/{{pizza.id}}" method="post">
+        Sabor: <input type="text" name="sabor" value="{{pizza.sabor}}" /><br />
+        Imagem: <input type="text" name="imagem" value="{{pizza.imagem}}" /><br />
+        Ingredientes: <input type="text" name="ingredientes" value="{{pizza.ingredientes}}" /><br />
+        Preco: <input type="text" name="preco" value="{{pizza.preco}}" /><br />
+        <input type="hidden" name="id" value="{{pizza.id}}" />
+        <button type="submit">Editar</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <p>Voce tem certeza que deseja excluir o pedido: {{pedido.nome}}?</p>
+    <form action="/pedidos/delete/{{pedido.id}}" method="post">
+        <button type="submit" value="Sim">Sim</button>
+        <a href="/pedidos/recovery">Cancelar</button>
+    </form>
+
+{% endblock %}

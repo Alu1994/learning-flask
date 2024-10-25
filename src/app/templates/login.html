@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- {% set mensagens = get_flashed_messages() %} scopo global -->
+    {% with mensagens = get_flashed_messages() %} <!-- scopo local -->
+        {% if mensagens %}
+            <div>
+                <ul>
+                    {% for msg in mensagens %}
+                        <li>{{ msg }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <form action="/autenticar" method="post">
+            Usuario: <input type="text" name="usuario" />
+            Senha: <input type="password" name="senha" />
+            <button type="submit">Entrar</button>
+        </form>
+
+    {% endwith %}
+
+{% endblock %}

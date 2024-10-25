@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% with mensagens = get_flashed_messages() %} <!-- scopo local -->
+        {% if mensagens %}
+            <div>
+                <ul>
+                    {% for msg in mensagens %}
+                        <li>{{ msg }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <p>Voce tem certeza que deseja excluir o usuario: {{usuario.nome}}?</p>
+        <form action="/usuarios/delete/{{usuario.id}}" method="post">
+            <button type="submit" value="Sim">Sim</button>
+            <a href="/usuarios/recovery">Cancelar</button>
+        </form>
+
+    {% endwith %}
+
+{% endblock %}

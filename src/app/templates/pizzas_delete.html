@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <p>Voce tem certeza que deseja excluir a pizza: {{pizza.nome}}?</p>
+    <form action="/pizzas/delete/{{pizza.id}}" method="post">
+        <button type="submit" value="Sim">Sim</button>
+        <a href="/pizzas/recovery">Cancelar</button>
+    </form>
+
+{% endblock %}

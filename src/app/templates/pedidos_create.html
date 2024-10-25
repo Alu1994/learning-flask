@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="/pedidos/create" method="post">
+        Id do usuario: <input type="text" name="usuario_id" /><br />
+        Id da pizza: <input type="text" name="pizza_id" /><br />
+        <button type="submit">Cadastrar</button>
+    </form>
+
+{% endblock %}

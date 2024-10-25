@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <ul>
+            {% for pedido in pedidos %}
+                <li>
+                    {{ pedido.id }} -
+                    {{ pedido.usuario.nome }} -
+                    {{ pedido.pizza.sabor }} -
+                    <a href="/pedidos/update/{{ pedido.id }}">Editar</a>
+                    <a href="/pedidos/delete/{{ pedido.id }}">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

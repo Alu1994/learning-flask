@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="/pedidos/update/{{pedido.id}}" method="post">        
+        Id do usuario: <input type="text" name="usuario_id" value="{{pedido.usuario_id}}" /><br />
+        Id da pizza: <input type="text" name="pizza_id" value="{{pedido.pizza_id}}" /><br />
+        <input type="hidden" name="id" value="{{pedido.id}}" />
+        <button type="submit">Editar</button>
+    </form>
+
+{% endblock %}
