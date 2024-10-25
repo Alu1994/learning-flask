@@ -22,7 +22,7 @@ flask db init
 ```
 
 ```shell
-flask db migrate -m "Inicializando o db"
+flask db migrate -m "Initialize db"
 ```
 
 ```shell
