@@ -1,10 +1,30 @@
 # Learning Flask
 
-- python-dotenv
-- pip install Flask
-- pip install Flask-Migrate
-- pip install Flask-Script
+### - download python env
+```shell
+python-dotenv
+```
 
-- flask db init
-- flask db migrate -m "Inicializando o db"
-- flask db upgrade
+```shell
+pip install Flask
+```
+
+ ```shell
+pip install Flask-Migrate
+```
+
+```shell
+pip install Flask-Script
+```
+
+```shell
+flask db init
+```
+
+```shell
+flask db migrate -m "Inicializando o db"
+```
+
+```shell
+flask db upgrade
+```
